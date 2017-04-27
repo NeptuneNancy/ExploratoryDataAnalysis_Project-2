@@ -4,10 +4,11 @@
 ## from 1999 to 2008? Use the base plotting system to make a plot answering this question.
 
 ## Answer: Total emissions in Baltimore City have bounced around from 1999 to 2008, but overall, have gone down.  
-## Emission levels in 2008 are significantly less than they were in 1999.
+## Emission levels in 2008 are less than they were in 1999.
+
+## Nancy Gamelin/NeptuneNancy  April 2017
 
 ## assume files are in working directory
-## setwd("~/Desktop/04 Exploratory Analysis/Week 4/Project 2/exdata-data-NEI_data")
 
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
@@ -38,7 +39,12 @@ png(filename = "plot2.png", width=480, height=480, units="px", bg="white")
 par(oma = c(0,1,0,0)) 
 
 ## create plot
-with(plot2_df, plot(year, emissions, xlab = "Year", ylab = "Total Emissions (in Tons)", pch=19, xlim = range(1998, 2008)))
+with(plot2_df, plot(year, emissions, 
+                    xlab = "Year", 
+                    ylab = "Total Emissions (in Tons)", 
+                    type = "o",
+                    pch=19, 
+                    xlim = range(1998, 2008)))
 
 ## add title
 title("Baltimore City Total Emissions Per Year")

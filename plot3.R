@@ -5,12 +5,13 @@
 ## Which have seen increases in emissions from 1999-2008?  Use the ggplot2 plotting system to make a plot
 ## to answer this question.
 
-## Answer:  Of the four types of sources of emissions data in Baltimore City, three have seen steady decreases 
+## Answer:  Of the four types of sources of emissions data in Baltimore City, three showed steady decreases 
 ## from 1999 to 2008: on road, non road and non point.  Point sources showed an increase from 1999 to
 ## 2005, but decreased by 2008, almost to 1999 levels.
 
+## Nancy Gamelin/NeptuneNancy  April 2017
+
 ## assume files are in working directory
-## setwd("~/Desktop/04 Exploratory Analysis/Week 4/Project 2/exdata-data-NEI_data")
 
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")

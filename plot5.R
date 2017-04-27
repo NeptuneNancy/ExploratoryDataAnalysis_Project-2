@@ -2,9 +2,10 @@
 
 ## Question: How have emissions from motor vehicle sources changed from 1999–2008 in Baltimore City?
 
-## Answer: Yes, emissions due to motor vehicle sources in Baltimore City have decreased from 1999-2008,
+## Answer: Emissions due to motor vehicle sources in Baltimore City have decreased from 1999-2008,
 ## with the largest decrease occuring from 1999 to 2002.
 
+## Nancy Gamelin/NeptuneNancy  April 2017
 
 ## How I determined "motor vehicle-related sources":
 ## I inspected the data in the SCC file, and decided the SCC.Level.Two variable contained the pertinant information 
@@ -20,7 +21,6 @@
 
 
 ## assume files are in working directory
-## setwd("~/Desktop/04 Exploratory Analysis/Week 4/Project 2/exdata-data-NEI_data")
 
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
@@ -66,7 +66,14 @@ png(filename = "plot5.png", width=480, height=480, units="px", bg="white")
 
 ## adjust margins
 par(oma = c(0,1,0,0)) 
-with(plot5_df, plot(year, emissions, xlab = "Year", ylab = "Total Emissions (in Tons)", pch=19, xlim = range(1998, 2008), ylim = range(50, 400)))
+with(plot5_df, plot(year, emissions, 
+                    xlab = "Year", 
+                    ylab = "Total Emissions (in Tons)", 
+                    type = "o",
+                    pch=19, 
+                    xlim = range(1998, 2008), 
+                    ylim = range(50, 400)))
+
 title(main = "Total Emissions Per Year - \nMotor Vehicle Sources in Baltimore City" )
 
 ## close device

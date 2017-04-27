@@ -9,6 +9,7 @@
 ## from 1999 - 2005, only decreasing by 2008.  Los Angeles has seen greater changes over time, in both volume
 ## and direction of change.
 
+## Nancy Gamelin/NeptuneNancy  April 2017
 
 ## How I determined "motor vehicle-related sources":
 ## I inspected the data in the SCC file, and decided the SCC.Level.Two variable contained the pertinant information 
@@ -26,7 +27,6 @@
 
 
 ## assume files are in working directory
-## setwd("~/Desktop/04 Exploratory Analysis/Week 4/Project 2/exdata-data-NEI_data")
 
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
@@ -69,8 +69,8 @@ balt_df <- summarize(baltimore_by_years, emissions = sum(Emissions, na.rm=TRUE))
 la_df <- summarize(los_angeles_by_years, emissions = sum(Emissions, na.rm=TRUE))
 
 ## add city column for each df, prior to combining them
-balt_mut <- mutate(plot6_balt_df, city = "Baltimore")
-la_mut <- mutate(plot6_la_df, city="Los Angeles")
+balt_mut <- mutate(balt_df, city = "Baltimore")
+la_mut <- mutate(la_df, city="Los Angeles")
 
 balt_la <- rbind(balt_mut, la_mut)
 

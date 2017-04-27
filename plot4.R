@@ -14,8 +14,9 @@
 ## Answer:  While emissions in the US from coal-combustion sources decreased slightly overall from 1999-2005,
 ## they showed a large decrease by 2005.
 
+## Nancy Gamelin/NeptuneNancy  April 2017
+
 ## assume files are in working directory
-## setwd("~/Desktop/04 Exploratory Analysis/Week 4/Project 2/exdata-data-NEI_data")
 
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
@@ -72,9 +73,15 @@ png(filename = "plot4.png", width=480, height=480, units="px", bg="white")
 par(oma = c(0,1,0,0)) 
 
 ## create plot
-with(plot4_df_thousands, plot(year, `emissions/1000`, xlab = "Year", ylab = "Total Emissions (Thousands of Tons)", pch=19, xlim = range(1998, 2008), ylim = range(300, 600)))
+with(plot4_df_thousands, plot(year, `emissions/1000`, 
+                              xlab = "Year", 
+                              ylab = "Total Emissions (Thousands of Tons)", 
+                              type = "o",
+                              pch=19, 
+                              xlim = range(1998, 2008), 
+                              ylim = range(300, 600)))
 ## add title
-title("Total Emissions Per Year - Coal Combustion Sources")
+title("Total Emissions per Year in United States \nCoal Combustion Sources")
 
 ## close device
 dev.off()

@@ -4,7 +4,7 @@
 ## Using the base plotting system, make a plot showing the total PM2.5 emission from all sources 
 ## for each of the years 1999, 2002, 2005, and 2008.
 
-## Answer:  Yes, total emissions per year have decresed in the US from 1999 to 2008.
+## Answer:  Yes, total emissions per year have decreased in the US from 1999 to 2008.
 
 ## Nancy Gamelin/NeptuneNancy  April 2017
 
